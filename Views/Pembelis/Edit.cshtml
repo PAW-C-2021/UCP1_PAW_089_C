@@ -1,0 +1,44 @@
+﻿@model UCP1_PAW_089_C.Models.Pembeli
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Pembeli</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPembeli" />
+            <div class="form-group">
+                <label asp-for="NamaPembeli" class="control-label"></label>
+                <input asp-for="NamaPembeli" class="form-control" />
+                <span asp-validation-for="NamaPembeli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoHpPembeli" class="control-label"></label>
+                <input asp-for="NoHpPembeli" class="form-control" />
+                <span asp-validation-for="NoHpPembeli" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdTransaksi" class="control-label"></label>
+                <select asp-for="IdTransaksi" class="form-control" asp-items="ViewBag.IdTransaksi"></select>
+                <span asp-validation-for="IdTransaksi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

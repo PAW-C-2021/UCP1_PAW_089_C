@@ -1,0 +1,48 @@
+﻿@model UCP1_PAW_089_C.Models.Penjual
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Penjual</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NamaPenjual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NamaPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailPenjual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmailPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoHpPenjual)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoHpPenjual)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdProdukNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdProdukNavigation.IdProduk)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPenjual">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<UCP1_PAW_089_C.Models.Pembeli>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pembeli</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Nama Pembeli")
+            </th>
+            <th>
+                @Html.DisplayName("No HP Pembeli")
+            </th>
+            <th>
+                @Html.DisplayName("ID Transaksi")
+            </th>
+            <th>
+                @Html.DisplayName("Action")
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NamaPembeli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NoHpPembeli)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdTransaksiNavigation.IdTransaksi)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdPembeli"><i class="fas fa-user-edit"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.IdPembeli"><i class="fas fa-info-circle"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdPembeli"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

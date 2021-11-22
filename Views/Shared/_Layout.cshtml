@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UCP1_PAW_089_C</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/92b8caa89a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CLOTHINGAN</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownlink">
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Products" asp-action="Index">Product</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Pembelis" asp-action="Index">Pembeli</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Penjuals" asp-action="Index">Penjual</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Transaksis" asp-action="Index">Transaksi</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Login" asp-action="Index">
+                                <button type="button" class="btn btn-danger btn-sm">Sign Out</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted text-center">
+        <div class="container">
+            &copy; 2021 - UCP1_PAW_089_C - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
